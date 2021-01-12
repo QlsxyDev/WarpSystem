@@ -1,0 +1,13 @@
+name: WarpSystem
+version: 0.4.0
+description: A small chat based WarpSystem!
+author: Qlsxy
+website: https://www.spigotmc.org/members/qlsxy.1159519
+api-version: 1.13
+
+main: eu.Qlsxy.etCraft.WarpSystem.main.Main
+databae: false
+
+commands:
+   warp:
+      aliases: warps
