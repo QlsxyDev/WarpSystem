@@ -18,16 +18,18 @@ public class WarpManager {
 	}
 
 	public void addWarp(Location loc, String nameL, String nameU, String permission) {
-		fw.setValue(nameL + ".displayname", nameU);
-		fw.setValue(nameL + ".world", loc.getWorld().getName());
-		fw.setValue(nameL + ".x", loc.getX());
-		fw.setValue(nameL + ".y", loc.getY());
-		fw.setValue(nameL + ".z", loc.getZ());
-		fw.setValue(nameL + ".yaw", loc.getYaw());
-		fw.setValue(nameL + ".pitch", loc.getPitch());
-		fw.setValue(nameL + ".permission", permission);
-		fw.setValue(nameL + ".Uses", 0);
-		fw.save();
+		if(loc != null && loc.getWorld() != null) {
+			fw.setValue(nameL + ".displayname", nameU);
+			fw.setValue(nameL + ".world", loc.getWorld().getName());
+			fw.setValue(nameL + ".x", loc.getX());
+			fw.setValue(nameL + ".y", loc.getY());
+			fw.setValue(nameL + ".z", loc.getZ());
+			fw.setValue(nameL + ".yaw", loc.getYaw());
+			fw.setValue(nameL + ".pitch", loc.getPitch());
+			fw.setValue(nameL + ".permission", permission);
+			fw.setValue(nameL + ".Uses", 0);
+			fw.save();
+		}
 	}
 
 	public Set<String> getWarps() {
