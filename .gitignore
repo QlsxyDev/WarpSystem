@@ -1,9 +1,0 @@
-.[out]
-
-*.class
-out/production/WarpSystem/eu/Qlsxy/etCraft/WarpSystem/main/Main.class
-out/production/WarpSystem/eu/Qlsxy/etCraft/WarpSystem/utils/FileManager.class
-out/production/WarpSystem/eu/Qlsxy/etCraft/WarpSystem/utils/WarpManager.class
-*.yml
-*.class
-out/production/WarpSystem/plugin.yml
