@@ -13,10 +13,6 @@ public class WarpManager {
 		fw = new FileManager("plugins//WarpSystem//", "Warps.yml");
 	}
 
-	public boolean exist(String name) {
-		return fw.getString(name.toLowerCase()) != null;
-	}
-
 	public void addWarp(Location loc, String nameL, String nameU, String permission) {
 		if(loc != null && loc.getWorld() != null) {
 			fw.setValue(nameL + ".displayname", nameU);

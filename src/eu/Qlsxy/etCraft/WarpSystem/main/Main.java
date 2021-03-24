@@ -7,6 +7,8 @@ import org.bukkit.ChatColor;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Objects;
+
 public class Main extends JavaPlugin {
 
 	public static Main instance;
@@ -16,7 +18,7 @@ public class Main extends JavaPlugin {
 	public void onEnable() {
 		instance = this;
 
-		getCommand("warp").setExecutor(new WarpCommand());
+		Objects.requireNonNull(getCommand("warp")).setExecutor(new WarpCommand());
 		PluginManager pm = Bukkit.getPluginManager();
 		pm.registerEvents(new WarpCommand(), this);
 
